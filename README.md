@@ -1,4 +1,4 @@
-# dominator
+# Dominator
 
 ## Project setup
 ```
