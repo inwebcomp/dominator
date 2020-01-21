@@ -39,6 +39,9 @@
   - График среднего результата
 - Архив маршрутов
 
+## Design
+https://www.figma.com/file/NWVGapIkm6K4SvPIBHHCuX/Dominator?node-id=0%3A1
+
 ## Project setup
 ```
 npm install
