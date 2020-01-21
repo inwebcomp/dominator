@@ -1,0 +1,14 @@
+.grid {
+	display: grid;
+}
+
+.grid--cols-2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: $padding;
+}
+
+.space-between {
+	display: flex;
+	justify-content: space-between;
+}

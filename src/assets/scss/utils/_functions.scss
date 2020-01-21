@@ -1,0 +1,11 @@
+@function remToPx($value) {
+    @return $value / 1rem * 10px * $font-scale;
+}
+
+@function rem($pixels) {
+    @return #{$pixels/10px*$font-scale}rem;
+}
+
+@function em($pixels, $context: $font-size) {
+    @return #{$pixels/$context}em;
+}

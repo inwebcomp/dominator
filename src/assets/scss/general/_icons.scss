@@ -1,0 +1,16 @@
+.icon {
+    display: inline-flex;
+    width: 27px;
+    height: 27px;
+    vertical-align: middle;
+    border-radius: 0;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.8rem;
+    transition: opacity $transition;
+}
+

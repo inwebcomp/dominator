@@ -1,0 +1,51 @@
+a {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+button {
+	@extend .button-reset;
+}
+
+.clear {
+	height: 0;
+	overflow: hidden;
+	font-size: 1px;
+	clear: both;
+	visibility: hidden;
+}
+
+template {
+	display: none;
+}
+
+.link {
+	transition: color $transition;
+
+	&:hover {
+		color: $accent-color;
+	}
+}
+
+.img-in-box {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.ul-reset {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.button-reset {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    display: block;
+    font-size: inherit;
+    color: inherit;
+    outline: none;
+}

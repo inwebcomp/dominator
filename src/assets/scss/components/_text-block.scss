@@ -1,0 +1,281 @@
+.text-block, .fr-view {
+        font-family: "OpenSans", sans-serif;
+        font-size: $font-size;
+        line-height: $line-height;
+        color: $font-color;
+        overflow: hidden;
+        padding-left: $padding * 6.25;
+        padding-bottom: $padding * 3;
+
+        @include media-max(1024px) {
+            padding-left: 0;
+        }
+        @include media-max(560px) {
+            font-size: 1.4rem;
+            padding-bottom: $padding * 2;
+        }
+
+        figure {
+            margin: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: $font-color;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 3.6rem;
+
+            @include media-max(560px) {
+                font-size: 2.6rem;
+            }
+        }
+
+        h3 {
+            font-size: 2.4rem;
+
+            @include media-max(560px) {
+                font-size: 2rem;
+            }
+        }
+
+        h4 {
+            font-size: 1.6rem;
+        }
+
+        h5 {
+            font-size: 1.4rem;
+        }
+
+        b {
+            font-weight: 700;
+        }
+
+        a {
+            font-weight: 500;
+            color: $accent-color;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+                opacity: 0.85;
+            }
+        }
+
+        p {
+            @include media-max(1140px) {
+                margin-left: 0 !important;
+                text-align: left !important;
+            }
+        }
+
+        p:first-child {
+            margin-top: 0;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        .p-float-img {
+            margin: $padding * 4 0 0 0;
+
+            @include media-max(560px) {
+                margin: $padding * 2 0 0 0;
+            }
+
+            img {
+                float: left;
+                max-width: 53.5%;
+                width: 100%;
+                margin-top: 0 !important;
+                margin-right: $padding * 2;
+                margin-left: -$padding * 6.25;
+
+                @include media-max(768px) {
+                    max-width: 100%;
+                    width: 100%;
+                    float: none;
+                    margin: 0;
+                    margin-bottom: $padding * 1.25;
+                }
+            }
+        }
+
+        .p-left-img {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin: $padding * 4 0 0 0;
+
+            @include media-max(560px) {
+                margin: $padding * 2 0 0 0;
+            }
+
+            &__container {
+                flex: 1;
+            }
+
+            .box-img {
+                max-width: 53.5%;
+                width: 100%;
+                margin-right: $padding * 2;
+                margin-left: -$padding * 6.25;
+
+                @include media-max(1024px) {
+                    margin-left: 0;
+                    max-width: 100%;
+                    width: 100%;
+                    margin-bottom: $padding * 1.25;
+                }
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    display: block;
+                    margin-top: 0 !important;
+                    margin-bottom: $padding * 0.5 !important;
+                }
+
+                figcaption {
+                    display: block;
+                    margin: $padding 0 0 0;
+                    font-size: 1.4rem;
+                    color: $font-color;
+                }
+            }
+        }
+
+        hr {
+            border: none;
+            background-color: $border-color;
+            height: 1px;
+            margin: $padding * 2 0;
+        }
+
+        table {
+            th {
+                background-color: #999;
+            }
+
+            td, th {
+                border: none;
+            }
+        }
+
+        thead th {
+            height: 48px;
+            font-weight: 500;
+            font-size: $font-size;
+        }
+
+        tbody td {
+            padding: $padding - 3px $padding;
+            border-bottom: 1px solid $border-color;
+        }
+
+        li + li {
+            margin-top: $padding * 1.5;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: $padding * 6.25;
+            margin: $padding * 3 0 0 0;
+
+            @include media-max(768px) {
+                margin: $padding * 2.25 0 0 0;
+                padding-left: $padding * 3;
+            }
+
+            @include media-max(425px) {
+                padding-left: 0;
+            }
+
+            li {
+                position: relative;
+                padding-left: 38px;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    border: 2px solid $accent-color;
+                    background-color: $background-color;
+                    position: absolute;
+                    top: 3px;
+                    left: 0;
+                }
+            }
+        }
+
+        ol {
+            list-style: none;
+            counter-reset: list-counter;
+            margin: $padding * 3 0 0 0;
+            padding-left: $padding * 6.25;
+            position: relative;
+
+            @include media-max(768px) {
+                margin: $padding * 2.25 0 0 0;
+                padding-left: $padding * 3;
+            }
+
+            @include media-max(425px) {
+                padding-left: 0;
+            }
+
+            li {
+                counter-increment: list-counter;
+
+                $size: 2.2rem;
+
+                &::before {
+                    content: counter(list-counter) '. \2014';
+                    display: inline-block;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    width: $size * 2;
+                    height: $size;
+                    line-height: $size;
+                    border-radius: 1.1rem;
+                    text-align: center;
+                    color: $accent-color;
+                    background-color: transparent;
+                    //margin: 0 $padding 0 (remToPx(-$size) - $padding);
+                    margin-right: $padding * 0.25;
+                }
+            }
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: $padding 0;
+
+            @include media-max(1024px) {
+                // max-width: 100%;
+                // float: none;
+                // display: block ;
+                // margin-bottom: $padding * 1.5;
+                // margin-top: $padding !important;
+                // margin-left: 0 !important;
+                // margin-right: auto !important;
+                // width: auto !important;
+            }
+            // &.fr-fic {
+            //     @include media-max(1140px) {
+            //         margin-left: 0 !important;
+            //         margin-right: auto !important;
+            //     }
+            // }
+        }
+}
+
+
+
+

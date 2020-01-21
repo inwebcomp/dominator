@@ -1,0 +1,17 @@
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $header-color;
+    color: $font-color-light;
+    height: $header-height;
+    align-items: center;
+
+    &__toggler {
+        width: $header-height;
+    }
+
+    &__title {
+        font-size: rem(15px);
+        line-height: rem(18px);
+    }
+}

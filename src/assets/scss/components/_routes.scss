@@ -1,0 +1,33 @@
+.routes__group__title {
+    font-weight: 600;
+    font-size: rem(12px);
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: $font-color-secondary;
+    padding: $padding $padding $padding / 2;
+}
+
+.route {
+    background-color: #FFF;
+    padding: $padding / 2;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+
+    &__grade {
+        width: $padding * 3;
+        height: $padding * 3;
+        line-height: $padding * 3;
+        border-radius: $padding * 1.5;
+        background-color: $accent-color;
+        color: #FFF;
+        font-size: rem(17px);
+        text-align: center;
+        margin-right: $padding / 2;
+    }
+
+    &__title {
+        font-size: rem(15px);
+    }
+}
