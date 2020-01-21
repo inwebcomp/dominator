@@ -8,6 +8,9 @@
 
     &__toggler {
         width: $header-height;
+        height: $header-height;
+        line-height: $header-height;
+        text-align: center;
     }
 
     &__title {

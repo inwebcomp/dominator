@@ -14,6 +14,7 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid $border-color;
+    min-height: $padding * 3;
 
     &__grade {
         width: $padding * 3;
@@ -24,10 +25,20 @@
         color: #FFF;
         font-size: rem(17px);
         text-align: center;
-        margin-right: $padding / 2;
+    }
+
+    &__info {
+        margin-left: $padding / 2;
     }
 
     &__title {
         font-size: rem(15px);
+        line-height: 1;
+    }
+
+    &__author {
+        margin-top: $padding / 4;
+        font-size: rem(11px);
+        color: $font-color-secondary;
     }
 }

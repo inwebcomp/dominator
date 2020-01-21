@@ -3,13 +3,10 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+import route from './modules/route'
+
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+    modules: {
+        route
+    }
 })

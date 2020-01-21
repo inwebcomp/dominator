@@ -5,9 +5,7 @@
                 {{ __('Стена 1') }}
             </div>
             <div class="routes__group__routes">
-                <route/>
-                <route/>
-                <route/>
+                <route v-for="(route, $i) in routes" :key="$i" :route="route"/>
             </div>
         </div>
     </div>
@@ -15,9 +13,20 @@
 
 <script>
     import Route from "~components/Route"
+    import {mapGetters} from 'vuex'
 
     export default {
         name: 'routes',
         components: {Route},
+
+        async created() {
+            await this.$store.dispatch('route/get')
+        },
+
+        computed: {
+            ...mapGetters({
+                routes: 'route/routes'
+            })
+        }
     }
 </script>

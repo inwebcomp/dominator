@@ -1,16 +1,20 @@
 <template>
     <a class="route">
-        <div class="route__grade">
-            6a
+        <div class="route__grade" :style="{backgroundColor: route.color}">
+            <div v-if="route.grade">{{ route.grade.title }}</div>
+            <div v-if="!route.grade">?</div>
         </div>
         <div class="route__info">
-            <div class="route__title">Доминируй то</div>
+            <div class="route__title">{{ route.title }}</div>
+            <div class="route__author" v-if="route.author">{{ route.author.name }}</div>
         </div>
     </a>
 </template>
 
 <script>
     export default {
-        name: "Route"
+        name: "Route",
+
+        props: ['route']
     }
 </script>

@@ -12,6 +12,7 @@
 
 <style>
     /*@import url("./assets/css/tailwind.css");*/
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
 </style>
 
 <style lang="scss">
@@ -19,8 +20,8 @@
 </style>
 
 <script>
-    import Navigation from "~components/Navigation"
-    import AppFooter from "~components/AppFooter"
+    import Navigation from "~blocks/Navigation"
+    import AppFooter from "~blocks/AppFooter"
 
     export default {
         components: {AppFooter, Navigation}

@@ -5,6 +5,15 @@ import router from './router'
 import store from './store'
 import Translator from './services/Translator'
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+Vue.use(VueAxios, axios.create({
+    baseURL: process.env.VUE_APP_API_HOST + '/api'
+}))
+
+store.axios = Vue.axios
+
 let Lang = new Translator({})
 
 Vue.config.productionTip = false
