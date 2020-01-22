@@ -1,0 +1,41 @@
+.route-info {
+    &__title {
+        font-size: rem(18px);
+        font-weight: bold;
+        margin: $padding;
+    }
+}
+
+.route-actions {
+    margin: $padding;
+}
+
+.route-action {
+    background-color: $accent-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: $padding;
+    color: #FFF;
+    font-size: rem(14px);
+
+    & + .route-action {
+        margin-top: $padding / 2;
+    }
+
+    &__button {
+        height: $padding * 2;
+        line-height: $padding * 2;
+        width: $padding * 2.5;
+        text-align: center;
+        font-size: rem(30px);
+    }
+
+    &--top {
+        background-color: $accent-color-2;
+    }
+
+    &--try {
+        background-color: $accent-color-3;
+    }
+}

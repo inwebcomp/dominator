@@ -5,20 +5,25 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'home',
-  //   component: Home
-  // },
-  {
-    path: '/',
-    name: 'routes',
-    component: () => import(/* webpackChunkName: "routes" */ '../views/Routes.vue')
-  }
+    // {
+    //   path: '/',
+    //   name: 'home',
+    //   component: Home
+    // },
+    {
+        path: '/',
+        name: 'routes',
+        component: () => import(/* webpackChunkName: "routes" */ '../views/Routes.vue')
+    },
+    {
+        path: '/route/:route',
+        name: 'route',
+        component: () => import(/* webpackChunkName: "route" */ '../views/Route.vue')
+    }
 ]
 
 const router = new VueRouter({
-  routes
+    routes
 })
 
 export default router
