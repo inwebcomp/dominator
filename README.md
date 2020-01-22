@@ -46,6 +46,11 @@ https://www.figma.com/file/NWVGapIkm6K4SvPIBHHCuX/Dominator?node-id=0%3A1
 ```
 npm install
 ```
+Create **.env** file in root directory with contents:
+```
+VUE_APP_API_HOST=http://dominator-api.localhost
+```
+Set up **VUE_APP_API_HOST** value to the path to your Api
 
 ### Compiles and hot-reloads for development
 ```
